@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NumberToWord;
 
 namespace UnitTestProject
 {
@@ -27,7 +28,8 @@ namespace UnitTestProject
 										"two billion, three"};
 			foreach (int n in numbers)
 			{
-				//will call function here and check with assert
+				string s = Converter.ConvertNumberToString(n);
+				Assert.AreEqual(expectedResult[i++], s);
 			}
 		}
 	}

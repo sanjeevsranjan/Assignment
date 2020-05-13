@@ -11,8 +11,16 @@ namespace NumberToWordConsoleApp
     {
         static void Main(string[] args)
         {
-            //tested locally with some sample value- works fine here
-            string result = Converter.ConvertNumberToString(67474764);
+
+            // Please not that i am not handling input data type validation and the max length of input from user.
+            //Assuming user will input only number 
+           
+            int input;
+            Console.Write("Enter a value ");
+            input = Convert.ToInt32(Console.ReadLine());
+            string result = Converter.ConvertNumberToString(input);
+            Console.WriteLine(result);
+            Console.ReadLine();
         }
     }
 }
